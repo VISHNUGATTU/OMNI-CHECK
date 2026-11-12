@@ -145,3 +145,4 @@ FastAPI server runs on `http://localhost:8000`.
 ## 🔒 Security & Privacy
 - Zero credential leakage: secrets are managed exclusively through environment variables.
 - Resilient local fallback allows full evaluation without cloud dependencies or database instances.
+
