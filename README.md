@@ -142,6 +142,23 @@ FastAPI server runs on `http://localhost:8000`.
 
 ---
 
+## 🐳 One-Command Full Stack Docker Orchestration
+
+You can spin up the entire production stack (MongoDB, Redis, Python AI-Engine, Node.js Server, and React Frontend) using Docker Compose:
+
+```bash
+docker-compose up --build
+```
+
+- **Frontend**: `http://localhost`
+- **Backend API & WebSockets**: `http://localhost:5000`
+- **AI Microservice**: `http://localhost:8000`
+- **MongoDB**: `localhost:27017`
+- **Redis Broker**: `localhost:6379`
+
+
+---
+
 ## 🔒 Security & Privacy
 - Zero credential leakage: secrets are managed exclusively through environment variables.
 - Resilient local fallback allows full evaluation without cloud dependencies or database instances.

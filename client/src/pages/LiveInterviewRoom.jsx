@@ -262,9 +262,25 @@ export default function LiveInterviewRoom() {
             )}
 
             {/* Live Proctoring Overlay Indicator */}
-            <div className="absolute top-3 left-3 px-2 py-1 rounded-md bg-black/70 backdrop-blur border border-emerald-500/40 text-[10px] text-emerald-400 font-mono flex items-center gap-1.5">
+            <div className="absolute top-3 left-3 px-2.5 py-1 rounded-md bg-black/80 backdrop-blur border border-emerald-500/40 text-[10px] text-emerald-400 font-mono flex items-center gap-1.5 z-10">
               <span className="w-2 h-2 rounded-full bg-emerald-400 animate-ping" />
-              ACTIVE PROCTORING KERNEL
+              VISION PROCTOR: SECURE
+            </div>
+
+            <div className="absolute top-3 right-3 px-2 py-0.5 rounded bg-black/80 backdrop-blur border border-white/10 text-[9px] font-mono text-cyan-300 z-10">
+              RTT: 22ms &middot; 30 FPS
+            </div>
+
+            {/* Simulated Edge Face Mesh Target Box */}
+            <div className="absolute inset-8 border border-dashed border-emerald-400/30 rounded-2xl pointer-events-none flex flex-col justify-between p-3">
+              <div className="flex justify-between text-[9px] font-mono text-emerald-400/70">
+                <span>[GAZE: CENTER]</span>
+                <span>[FACES: 1]</span>
+              </div>
+              <div className="flex justify-between text-[9px] font-mono text-emerald-400/70">
+                <span>[POSE: 0.99]</span>
+                <span>[INTEGRITY: 100%]</span>
+              </div>
             </div>
           </div>
 
