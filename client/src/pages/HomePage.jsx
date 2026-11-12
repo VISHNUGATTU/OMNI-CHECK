@@ -202,16 +202,32 @@ export default function HomePage({ activeMode = 'retention' }) {
           {/* Minimal Glass CTAs */}
           <div className="inline-flex flex-wrap items-center justify-center gap-3 pointer-events-auto">
             <Link
-              to="/employee"
-              className="inline-flex items-center gap-2 px-6 py-2.5 rounded-full font-semibold text-xs sm:text-sm bg-white text-slate-950 hover:bg-slate-200 shadow-[0_0_30px_rgba(255,255,255,0.2)] transition-all active:scale-[0.98]"
+              to="/compliance"
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full font-semibold text-xs sm:text-sm bg-cyan-500 text-slate-950 hover:bg-cyan-400 shadow-[0_0_25px_rgba(6,182,212,0.3)] transition-all active:scale-[0.98]"
             >
-              <span>Launch Assessment</span>
+              <IconShield className="h-4 w-4" />
+              <span>Module 1: Compliance</span>
+            </Link>
+
+            <Link
+              to="/hr-suite"
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full font-semibold text-xs sm:text-sm bg-purple-600 text-white hover:bg-purple-500 shadow-[0_0_25px_rgba(168,85,247,0.3)] transition-all active:scale-[0.98]"
+            >
+              <FiUser className="h-4 w-4" />
+              <span>Module 2: HR Interviews</span>
+            </Link>
+
+            <Link
+              to="/employee"
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full font-semibold text-xs sm:text-sm bg-white text-slate-950 hover:bg-slate-200 shadow-[0_0_25px_rgba(255,255,255,0.2)] transition-all active:scale-[0.98]"
+            >
+              <span>Module 3: Adaptive Test</span>
               <IconArrowRight className="h-4 w-4" />
             </Link>
 
             <Link
               to="/hr"
-              className="inline-flex items-center gap-2 px-6 py-2.5 rounded-full font-semibold text-xs sm:text-sm bg-white/[0.06] hover:bg-white/[0.12] text-white border border-white/15 backdrop-blur-md transition-all active:scale-[0.98]"
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full font-semibold text-xs sm:text-sm bg-white/[0.06] hover:bg-white/[0.12] text-white border border-white/15 backdrop-blur-md transition-all active:scale-[0.98]"
             >
               <FiSliders className="h-3.5 w-3.5 text-slate-300" />
               <span>HR Console</span>
@@ -239,11 +255,103 @@ export default function HomePage({ activeMode = 'retention' }) {
               <span>Select Your Gateway</span>
             </div>
             <h2 className="text-3xl sm:text-4xl font-extrabold font-display text-white tracking-tight">
-              Two Specialized Enterprise Interfaces
+              Integrated Enterprise AI Gateways
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto text-left">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-6xl mx-auto text-left">
+            {/* Module 1: Document Compliance Card */}
+            <div
+              data-parallax="-0.03"
+              className="group relative rounded-2xl bg-gradient-to-b from-cyan-950/20 to-white/[0.015] p-7 border border-cyan-500/20 hover:border-cyan-400/40 transition-colors duration-300 shadow-[0_24px_60px_rgba(0,0,0,0.85)] backdrop-blur-xl flex flex-col justify-between will-change-transform"
+            >
+              <div className="absolute top-0 right-0 w-36 h-36 bg-cyan-500/[0.06] rounded-full blur-2xl group-hover:bg-cyan-500/[0.12] transition-all pointer-events-none" />
+              <div>
+                <div className="flex items-center justify-between mb-4">
+                  <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-cyan-500/10 text-cyan-300 border border-cyan-500/30">
+                    <IconShield className="w-3.5 h-3.5 text-cyan-400" /> Module 1: Compliance
+                  </span>
+                  <span className="text-xs font-mono text-cyan-400">3-Valued Kleene</span>
+                </div>
+                <h3 className="text-2xl font-bold text-white mb-2 group-hover:text-cyan-200 transition-colors">
+                  Document Compliance & Audit
+                </h3>
+                <p className="text-zinc-400 text-sm leading-relaxed mb-6">
+                  Compiles natural-language regulatory policies into formal structured rules r = (t, e, c, &tau;, q, x, a, &gamma;, s) and deterministically validates facts with W3C PROV-O evidence graphs.
+                </p>
+                <div className="space-y-2.5 mb-6 text-xs text-zinc-300">
+                  <div className="flex items-center gap-2.5">
+                    <IconCheckCircle className="h-4 w-4 text-cyan-400 flex-shrink-0" />
+                    <span>Deterministic 3-valued logic (True, False, Indeterminate)</span>
+                  </div>
+                  <div className="flex items-center gap-2.5">
+                    <IconCheckCircle className="h-4 w-4 text-cyan-400 flex-shrink-0" />
+                    <span>W3C PROV-O Provenance graph (Document, Entity, Claim)</span>
+                  </div>
+                  <div className="flex items-center gap-2.5">
+                    <IconCheckCircle className="h-4 w-4 text-cyan-400 flex-shrink-0" />
+                    <span>Automated cross-document contradiction detection</span>
+                  </div>
+                </div>
+              </div>
+
+              <div>
+                <Link
+                  to="/compliance"
+                  className="w-full inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-xl font-bold text-sm bg-cyan-500 hover:bg-cyan-400 text-black shadow-[0_0_25px_rgba(6,182,212,0.25)] transition-all active:translate-y-px"
+                >
+                  <span>Launch Compliance Kernel</span>
+                  <IconArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                </Link>
+              </div>
+            </div>
+
+            {/* Module 2: Live HR Interview Suite */}
+            <div
+              data-parallax="0.03"
+              className="group relative rounded-2xl bg-gradient-to-b from-purple-950/20 to-white/[0.015] p-7 border border-purple-500/20 hover:border-purple-400/40 transition-colors duration-300 shadow-[0_24px_60px_rgba(0,0,0,0.85)] backdrop-blur-xl flex flex-col justify-between will-change-transform"
+            >
+              <div className="absolute top-0 right-0 w-36 h-36 bg-purple-500/[0.06] rounded-full blur-2xl group-hover:bg-purple-500/[0.12] transition-all pointer-events-none" />
+              <div>
+                <div className="flex items-center justify-between mb-4">
+                  <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-purple-500/10 text-purple-300 border border-purple-500/30">
+                    <FiUser className="w-3.5 h-3.5 text-purple-400" /> Module 2: HR Interviews
+                  </span>
+                  <span className="text-xs font-mono text-purple-400">15 Milestones</span>
+                </div>
+                <h3 className="text-2xl font-bold text-white mb-2 group-hover:text-purple-200 transition-colors">
+                  AI Interviews & Surveillance
+                </h3>
+                <p className="text-zinc-400 text-sm leading-relaxed mb-6">
+                  Conducts live browser interviews with edge computer-vision proctoring, audio transcript processing, Milestone 7 Honeypot Trap detection, and deep 4-competency audit reports.
+                </p>
+                <div className="space-y-2.5 mb-6 text-xs text-zinc-300">
+                  <div className="flex items-center gap-2.5">
+                    <IconCheckCircle className="h-4 w-4 text-purple-400 flex-shrink-0" />
+                    <span>Live webcam stream & simulated browser proctoring</span>
+                  </div>
+                  <div className="flex items-center gap-2.5">
+                    <IconCheckCircle className="h-4 w-4 text-purple-400 flex-shrink-0" />
+                    <span>Honeypot Trap evaluating honesty vs fabricated bluffs</span>
+                  </div>
+                  <div className="flex items-center gap-2.5">
+                    <IconCheckCircle className="h-4 w-4 text-purple-400 flex-shrink-0" />
+                    <span>Question-by-question scoring and hire recommendations</span>
+                  </div>
+                </div>
+              </div>
+
+              <div>
+                <Link
+                  to="/hr-suite"
+                  className="w-full inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-xl font-bold text-sm bg-purple-600 hover:bg-purple-500 text-white shadow-[0_0_25px_rgba(168,85,247,0.25)] transition-all active:translate-y-px"
+                >
+                  <span>Open HR Interview Suite</span>
+                  <IconArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                </Link>
+              </div>
+            </div>
+
             {/* Candidate / Employee Portal Card */}
             <div
               data-parallax="-0.03"
