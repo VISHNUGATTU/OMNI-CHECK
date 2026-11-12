@@ -1,0 +1,411 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1700 1150" width="100%" height="100%" role="img" aria-label="8-Question Adaptive Assessment Generation and Context Flow Architecture">
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="100%" stop-color="#f8fafc" />
+    </linearGradient>
+
+    <!-- Drop Shadows -->
+    <filter id="cardShadow" x="-5%" y="-5%" width="110%" height="115%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#0f172a" flood-opacity="0.06" />
+    </filter>
+
+    <!-- Markers -->
+    <marker id="arrowBlue" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+      <path d="M0,1 L7,4 L0,7 Z" fill="#2563eb" />
+    </marker>
+    <marker id="arrowPurple" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+      <path d="M0,1 L7,4 L0,7 Z" fill="#9333ea" />
+    </marker>
+    <marker id="arrowEmerald" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+      <path d="M0,1 L7,4 L0,7 Z" fill="#059669" />
+    </marker>
+    <marker id="arrowTeal" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+      <path d="M0,1 L7,4 L0,7 Z" fill="#0d9488" />
+    </marker>
+    <marker id="arrowGray" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+      <path d="M0,1 L7,4 L0,7 Z" fill="#64748b" />
+    </marker>
+
+    <style>
+      .font-sans { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; }
+      .header-title { font-size: 26px; font-weight: 800; fill: #0f172a; letter-spacing: -0.5px; }
+      .header-eyebrow { font-size: 12px; font-weight: 800; fill: #0284c7; letter-spacing: 1.5px; text-transform: uppercase; }
+      .header-desc { font-size: 14px; fill: #475569; font-weight: 400; }
+      .section-badge { font-size: 11px; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase; }
+      .turn-num { font-size: 12px; font-weight: 800; fill: #ffffff; }
+      .turn-title { font-size: 14px; font-weight: 700; fill: #0f172a; }
+      .turn-topic { font-size: 12px; font-weight: 600; }
+      .turn-desc { font-size: 11px; fill: #475569; font-weight: 400; line-height: 1.3; }
+      .worker-title { font-size: 11px; font-weight: 700; fill: #0f172a; }
+      .worker-desc { font-size: 10.5px; fill: #475569; line-height: 1.25; }
+      .cache-badge { font-size: 10px; font-weight: 800; fill: #047857; }
+    </style>
+  </defs>
+
+  <!-- Clean Pure White Canvas -->
+  <rect width="1700" height="1150" fill="url(#bgGrad)" />
+  <rect x="0" y="0" width="1700" height="6" fill="#0284c7" />
+
+  <!-- HEADER -->
+  <g transform="translate(50, 45)">
+    <rect x="0" y="0" width="1600" height="95" rx="12" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.5" filter="url(#cardShadow)" />
+    <text x="30" y="28" class="font-sans header-eyebrow">Architecture Specification / Low-Level Pipeline &amp; Context Propagation</text>
+    <text x="30" y="58" class="font-sans header-title">8-Question Adaptive Assessment Generation &amp; Background Lookahead</text>
+    <text x="30" y="80" class="font-sans header-desc">2 Technical Skills &bull; 2 Behavioral Judgments &bull; 2 Team Collaborations &bull; 2 Coding MCQs (100% Respected-Topic Context Isolation)</text>
+    
+    <rect x="1360" y="22" width="210" height="52" rx="8" fill="#f0fdf4" stroke="#86efac" stroke-width="1" />
+    <text x="1375" y="42" class="font-sans" font-size="11" font-weight="700" fill="#166534">PERCEIVED LATENCY</text>
+    <text x="1375" y="63" class="font-sans" font-size="18" font-weight="800" fill="#15803d">&lt; 10 ms (Instant)</text>
+  </g>
+
+  <!-- STATIC PROFILE CONTEXT SEEDER (Top Left) -->
+  <g transform="translate(50, 160)">
+    <rect x="0" y="0" width="220" height="110" rx="10" fill="#ffffff" stroke="#0284c7" stroke-width="1.5" stroke-dasharray="4,3" filter="url(#cardShadow)" />
+    <rect x="12" y="12" width="6" height="20" rx="3" fill="#0284c7" />
+    <text x="26" y="27" class="font-sans section-badge" fill="#0369a1">STATIC PROFILE SEED</text>
+    <text x="14" y="50" class="font-sans" font-size="12" font-weight="700" fill="#0f172a">&bull; Resume Text Extract</text>
+    <text x="14" y="68" class="font-sans" font-size="12" font-weight="700" fill="#0f172a">&bull; Role Benchmark Skills</text>
+    <text x="14" y="88" class="font-sans" font-size="11" fill="#64748b">Zero prior answers required</text>
+  </g>
+
+  <!-- Seed feeder line to Initial Probes -->
+  <path d="M270,215 H 330" stroke="#0284c7" stroke-width="2" marker-end="url(#arrowBlue)" />
+  <text x="345" y="210" class="font-sans" font-size="11" font-weight="700" fill="#0369a1">Seeds Turn 1, Turn 2 &amp; Turn 5 directly</text>
+
+  <!-- CONTEXT FLOW ROUTING HIGHLIGHT BOX (Top Right) -->
+  <g transform="translate(620, 160)">
+    <rect x="0" y="0" width="1030" height="110" rx="10" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.5" filter="url(#cardShadow)" />
+    <text x="24" y="28" class="font-sans section-badge" fill="#6b21a8">RESPECTED-TOPIC CONTEXT ISOLATION RULE</text>
+    
+    <g transform="translate(24, 40)">
+      <rect x="0" y="0" width="310" height="55" rx="6" fill="#eff6ff" stroke="#bfdbfe" />
+      <circle cx="18" cy="27" r="10" fill="#2563eb" />
+      <text x="14" y="31" class="font-sans turn-num">1</text>
+      <text x="36" y="24" class="font-sans" font-size="12" font-weight="700" fill="#1e40af">Technical Stream</text>
+      <text x="36" y="42" class="font-sans" font-size="11" fill="#3b82f6">Answer 1 &rarr; feeds strictly into Turn 3</text>
+    </g>
+
+    <g transform="translate(355, 40)">
+      <rect x="0" y="0" width="310" height="55" rx="6" fill="#faf5ff" stroke="#e9d5ff" />
+      <circle cx="18" cy="27" r="10" fill="#9333ea" />
+      <text x="14" y="31" class="font-sans turn-num">2</text>
+      <text x="36" y="24" class="font-sans" font-size="12" font-weight="700" fill="#6b21a8">Behavioral Stream</text>
+      <text x="36" y="42" class="font-sans" font-size="11" fill="#a855f7">Answer 2 &rarr; feeds strictly into Turn 4</text>
+    </g>
+
+    <g transform="translate(685, 40)">
+      <rect x="0" y="0" width="320" height="55" rx="6" fill="#ecfdf5" stroke="#a7f3d0" />
+      <circle cx="18" cy="27" r="10" fill="#059669" />
+      <text x="14" y="31" class="font-sans turn-num">3</text>
+      <text x="36" y="24" class="font-sans" font-size="12" font-weight="700" fill="#065f46">Collaboration Stream</text>
+      <text x="36" y="42" class="font-sans" font-size="11" fill="#10b981">Answer 5 &rarr; feeds strictly into Turn 7</text>
+    </g>
+  </g>
+
+  <!-- ========================================================================= -->
+  <!-- FOREGROUND: 8 QUESTION CARDS (TURNS 1 TO 8) -->
+  <!-- ========================================================================= -->
+
+  <!-- CARD 1: Technical Q1 -->
+  <g transform="translate(50, 370)">
+    <rect x="0" y="0" width="180" height="220" rx="10" fill="#ffffff" stroke="#2563eb" stroke-width="2" filter="url(#cardShadow)" />
+    <path d="M0,10 Q0,0 10,0 H170 Q180,0 180,10 V32 H0 Z" fill="#2563eb" />
+    <text x="12" y="21" class="font-sans turn-num">TURN 1</text>
+    <text x="75" y="21" class="font-sans" font-size="10" font-weight="700" fill="#bfdbfe">SEED PROBE</text>
+
+    <text x="14" y="56" class="font-sans turn-title">Technical Q1</text>
+    <text x="14" y="74" class="font-sans turn-topic" fill="#2563eb">Architecture &amp; Skills</text>
+    
+    <rect x="12" y="88" width="156" height="50" rx="6" fill="#f8fafc" stroke="#e2e8f0" />
+    <text x="18" y="105" class="font-sans" font-size="10" font-weight="700" fill="#0284c7">INPUT CONTEXT:</text>
+    <text x="18" y="122" class="font-sans" font-size="11" fill="#334155">Resume + Role Skills</text>
+    <text x="18" y="132" class="font-sans" font-size="9" fill="#64748b">Zero prior answers</text>
+
+    <text x="14" y="160" class="font-sans turn-desc">Tests baseline mastery in declared tech stack.</text>
+
+    <rect x="12" y="182" width="156" height="26" rx="5" fill="#eff6ff" />
+    <text x="20" y="199" class="font-sans" font-size="10.5" font-weight="700" fill="#1d4ed8">Produces: Answer 1</text>
+  </g>
+
+  <!-- CARD 2: Behavioral Q1 -->
+  <g transform="translate(250, 370)">
+    <rect x="0" y="0" width="180" height="220" rx="10" fill="#ffffff" stroke="#9333ea" stroke-width="2" filter="url(#cardShadow)" />
+    <path d="M0,10 Q0,0 10,0 H170 Q180,0 180,10 V32 H0 Z" fill="#9333ea" />
+    <text x="12" y="21" class="font-sans turn-num">TURN 2</text>
+    <text x="75" y="21" class="font-sans" font-size="10" font-weight="700" fill="#e9d5ff">SEED PROBE</text>
+
+    <text x="14" y="56" class="font-sans turn-title">Behavioral Q1</text>
+    <text x="14" y="74" class="font-sans turn-topic" fill="#9333ea">High-Pressure Situations</text>
+    
+    <rect x="12" y="88" width="156" height="50" rx="6" fill="#f8fafc" stroke="#e2e8f0" />
+    <text x="18" y="105" class="font-sans" font-size="10" font-weight="700" fill="#7e22ce">INPUT CONTEXT:</text>
+    <text x="18" y="122" class="font-sans" font-size="11" fill="#334155">Resume + Role Context</text>
+    <text x="18" y="132" class="font-sans" font-size="9" fill="#64748b">Zero prior answers</text>
+
+    <text x="14" y="160" class="font-sans turn-desc">Probes incident triage &amp; trade-off accountability.</text>
+
+    <rect x="12" y="182" width="156" height="26" rx="5" fill="#faf5ff" />
+    <text x="20" y="199" class="font-sans" font-size="10.5" font-weight="700" fill="#7e22ce">Produces: Answer 2</text>
+  </g>
+
+  <!-- CARD 3: Technical Q2 (Follow-up) -->
+  <g transform="translate(450, 370)">
+    <rect x="0" y="0" width="180" height="220" rx="10" fill="#ffffff" stroke="#2563eb" stroke-width="2" filter="url(#cardShadow)" />
+    <path d="M0,10 Q0,0 10,0 H170 Q180,0 180,10 V32 H0 Z" fill="#1e40af" />
+    <text x="12" y="21" class="font-sans turn-num">TURN 3</text>
+    <text x="75" y="21" class="font-sans" font-size="10" font-weight="700" fill="#93c5fd">DEEP FOLLOW-UP</text>
+
+    <text x="14" y="56" class="font-sans turn-title">Technical Q2</text>
+    <text x="14" y="74" class="font-sans turn-topic" fill="#2563eb">Pressure-Test Tech 1</text>
+    
+    <rect x="12" y="88" width="156" height="50" rx="6" fill="#eff6ff" stroke="#bfdbfe" />
+    <text x="18" y="105" class="font-sans" font-size="10" font-weight="700" fill="#1d4ed8">INPUT CONTEXT:</text>
+    <text x="18" y="122" class="font-sans" font-size="11" font-weight="700" fill="#1e3a8a">Answer 1 (Tech Q1)</text>
+    <text x="18" y="132" class="font-sans" font-size="9" fill="#60a5fa">No behavioral context</text>
+
+    <text x="14" y="160" class="font-sans turn-desc">Challenges edge cases &amp; decisions in Answer 1.</text>
+
+    <rect x="12" y="182" width="156" height="26" rx="5" fill="#eff6ff" />
+    <text x="20" y="199" class="font-sans" font-size="10.5" font-weight="700" fill="#1d4ed8">Produces: Answer 3</text>
+  </g>
+
+  <!-- CARD 4: Behavioral Q2 (Follow-up) -->
+  <g transform="translate(650, 370)">
+    <rect x="0" y="0" width="180" height="220" rx="10" fill="#ffffff" stroke="#9333ea" stroke-width="2" filter="url(#cardShadow)" />
+    <path d="M0,10 Q0,0 10,0 H170 Q180,0 180,10 V32 H0 Z" fill="#6b21a8" />
+    <text x="12" y="21" class="font-sans turn-num">TURN 4</text>
+    <text x="75" y="21" class="font-sans" font-size="10" font-weight="700" fill="#d8b4fe">DEEP FOLLOW-UP</text>
+
+    <text x="14" y="56" class="font-sans turn-title">Behavioral Q2</text>
+    <text x="14" y="74" class="font-sans turn-topic" fill="#9333ea">Pressure-Test Behav 1</text>
+    
+    <rect x="12" y="88" width="156" height="50" rx="6" fill="#faf5ff" stroke="#e9d5ff" />
+    <text x="18" y="105" class="font-sans" font-size="10" font-weight="700" fill="#6b21a8">INPUT CONTEXT:</text>
+    <text x="18" y="122" class="font-sans" font-size="11" font-weight="700" fill="#581c87">Answer 2 (Behav Q1)</text>
+    <text x="18" y="132" class="font-sans" font-size="9" fill="#c084fc">No technical context</text>
+
+    <text x="14" y="160" class="font-sans turn-desc">Probes individual role in conflict resolution.</text>
+
+    <rect x="12" y="182" width="156" height="26" rx="5" fill="#faf5ff" />
+    <text x="20" y="199" class="font-sans" font-size="10.5" font-weight="700" fill="#7e22ce">Produces: Answer 4</text>
+  </g>
+
+  <!-- CARD 5: Collaboration Q1 (Seed Probe) -->
+  <g transform="translate(850, 370)">
+    <rect x="0" y="0" width="180" height="220" rx="10" fill="#ffffff" stroke="#059669" stroke-width="2" filter="url(#cardShadow)" />
+    <path d="M0,10 Q0,0 10,0 H170 Q180,0 180,10 V32 H0 Z" fill="#059669" />
+    <text x="12" y="21" class="font-sans turn-num">TURN 5</text>
+    <text x="75" y="21" class="font-sans" font-size="10" font-weight="700" fill="#a7f3d0">SEED PROBE</text>
+
+    <text x="14" y="56" class="font-sans turn-title">Collaboration Q1</text>
+    <text x="14" y="74" class="font-sans turn-topic" fill="#059669">Teamwork &amp; PR Reviews</text>
+    
+    <rect x="12" y="88" width="156" height="50" rx="6" fill="#f8fafc" stroke="#e2e8f0" />
+    <text x="18" y="105" class="font-sans" font-size="10" font-weight="700" fill="#047857">INPUT CONTEXT:</text>
+    <text x="18" y="122" class="font-sans" font-size="11" fill="#334155">Resume + Role Context</text>
+    <text x="18" y="132" class="font-sans" font-size="9" fill="#64748b">Zero prior answers</text>
+
+    <text x="14" y="160" class="font-sans turn-desc">Evaluates cross-functional alignment &amp; reviews.</text>
+
+    <rect x="12" y="182" width="156" height="26" rx="5" fill="#ecfdf5" />
+    <text x="20" y="199" class="font-sans" font-size="10.5" font-weight="700" fill="#047857">Produces: Answer 5</text>
+  </g>
+
+  <!-- CARD 6: Coding MCQ 1 (Code Execution Buffer) -->
+  <g transform="translate(1050, 370)">
+    <rect x="0" y="0" width="180" height="220" rx="10" fill="#ffffff" stroke="#d97706" stroke-width="2" filter="url(#cardShadow)" />
+    <path d="M0,10 Q0,0 10,0 H170 Q180,0 180,10 V32 H0 Z" fill="#d97706" />
+    <text x="12" y="21" class="font-sans turn-num">TURN 6</text>
+    <text x="75" y="21" class="font-sans" font-size="10" font-weight="700" fill="#fef3c7">MCQ PUZZLE</text>
+
+    <text x="14" y="56" class="font-sans turn-title">Coding MCQ 1</text>
+    <text x="14" y="74" class="font-sans turn-topic" fill="#d97706">Code Output (A,B,C,D)</text>
+    
+    <rect x="12" y="88" width="156" height="50" rx="6" fill="#fffbeb" stroke="#fde68a" />
+    <text x="18" y="105" class="font-sans" font-size="10" font-weight="700" fill="#b45309">INPUT CONTEXT:</text>
+    <text x="18" y="122" class="font-sans" font-size="11" font-weight="700" fill="#92400e">Language Snippet</text>
+    <text x="18" y="132" class="font-sans" font-size="9" fill="#d97706">Zero prior answers</text>
+
+    <text x="14" y="160" class="font-sans turn-desc">Evaluates scoping, mutability &amp; event loop.</text>
+
+    <rect x="12" y="182" width="156" height="26" rx="5" fill="#fffbeb" />
+    <text x="20" y="199" class="font-sans" font-size="10.5" font-weight="700" fill="#b45309">Dwell Window: 45-60s</text>
+  </g>
+
+  <!-- CARD 7: Collaboration Q2 (Follow-up) -->
+  <g transform="translate(1250, 370)">
+    <rect x="0" y="0" width="180" height="220" rx="10" fill="#ffffff" stroke="#059669" stroke-width="2" filter="url(#cardShadow)" />
+    <path d="M0,10 Q0,0 10,0 H170 Q180,0 180,10 V32 H0 Z" fill="#065f46" />
+    <text x="12" y="21" class="font-sans turn-num">TURN 7</text>
+    <text x="75" y="21" class="font-sans" font-size="10" font-weight="700" fill="#a7f3d0">DEEP FOLLOW-UP</text>
+
+    <text x="14" y="56" class="font-sans turn-title">Collaboration Q2</text>
+    <text x="14" y="74" class="font-sans turn-topic" fill="#059669">Pressure-Test Collab 1</text>
+    
+    <rect x="12" y="88" width="156" height="50" rx="6" fill="#ecfdf5" stroke="#a7f3d0" />
+    <text x="18" y="105" class="font-sans" font-size="10" font-weight="700" fill="#047857">INPUT CONTEXT:</text>
+    <text x="18" y="122" class="font-sans" font-size="11" font-weight="700" fill="#064e3b">Answer 5 (Collab Q1)</text>
+    <text x="18" y="132" class="font-sans" font-size="9" fill="#34d399">No other topic context</text>
+
+    <text x="14" y="160" class="font-sans turn-desc">Challenges mentorship &amp; disagreement handling.</text>
+
+    <rect x="12" y="182" width="156" height="26" rx="5" fill="#ecfdf5" />
+    <text x="20" y="199" class="font-sans" font-size="10.5" font-weight="700" fill="#047857">Produces: Answer 7</text>
+  </g>
+
+  <!-- CARD 8: Coding MCQ 2 (Final Execution Buffer) -->
+  <g transform="translate(1450, 370)">
+    <rect x="0" y="0" width="180" height="220" rx="10" fill="#ffffff" stroke="#d97706" stroke-width="2" filter="url(#cardShadow)" />
+    <path d="M0,10 Q0,0 10,0 H170 Q180,0 180,10 V32 H0 Z" fill="#b45309" />
+    <text x="12" y="21" class="font-sans turn-num">TURN 8</text>
+    <text x="75" y="21" class="font-sans" font-size="10" font-weight="700" fill="#fef3c7">MCQ PUZZLE</text>
+
+    <text x="14" y="56" class="font-sans turn-title">Coding MCQ 2</text>
+    <text x="14" y="74" class="font-sans turn-topic" fill="#d97706">Code Output (A,B,C,D)</text>
+    
+    <rect x="12" y="88" width="156" height="50" rx="6" fill="#fffbeb" stroke="#fde68a" />
+    <text x="18" y="105" class="font-sans" font-size="10" font-weight="700" fill="#b45309">INPUT CONTEXT:</text>
+    <text x="18" y="122" class="font-sans" font-size="11" font-weight="700" fill="#78350f">Algorithm / Logic</text>
+    <text x="18" y="132" class="font-sans" font-size="9" fill="#d97706">Zero prior answers</text>
+
+    <text x="14" y="160" class="font-sans turn-desc">Tests closures, async promises &amp; references.</text>
+
+    <rect x="12" y="182" width="156" height="26" rx="5" fill="#fffbeb" />
+    <text x="20" y="199" class="font-sans" font-size="10.5" font-weight="700" fill="#b45309">Final Assessment Turn</text>
+  </g>
+
+  <!-- ========================================================================= -->
+  <!-- CONTEXT ARROWS CONNECTING RESPECTED TOPICS (CURVED OVER CARDS) -->
+  <!-- ========================================================================= -->
+
+  <!-- Technical Context Curve: Card 1 -> Card 3 -->
+  <path d="M140,365 C140,290 540,290 540,365" fill="none" stroke="#2563eb" stroke-width="3" stroke-dasharray="6,3" marker-end="url(#arrowBlue)" />
+  <rect x="300" y="278" width="140" height="22" rx="11" fill="#2563eb" />
+  <text x="370" y="293" text-anchor="middle" class="font-sans" font-size="10.5" font-weight="800" fill="#ffffff">Answer 1 &rarr; Tech Q2</text>
+
+  <!-- Behavioral Context Curve: Card 2 -> Card 4 -->
+  <path d="M340,365 C340,310 740,310 740,365" fill="none" stroke="#9333ea" stroke-width="3" stroke-dasharray="6,3" marker-end="url(#arrowPurple)" />
+  <rect x="500" y="300" width="140" height="22" rx="11" fill="#9333ea" />
+  <text x="570" y="315" text-anchor="middle" class="font-sans" font-size="10.5" font-weight="800" fill="#ffffff">Answer 2 &rarr; Behav Q2</text>
+
+  <!-- Collaboration Context Curve: Card 5 -> Card 7 -->
+  <path d="M940,365 C940,300 1340,300 1340,365" fill="none" stroke="#059669" stroke-width="3" stroke-dasharray="6,3" marker-end="url(#arrowEmerald)" />
+  <rect x="1100" y="290" width="145" height="22" rx="11" fill="#059669" />
+  <text x="1172" y="305" text-anchor="middle" class="font-sans" font-size="10.5" font-weight="800" fill="#ffffff">Answer 5 &rarr; Collab Q2</text>
+
+  <!-- ========================================================================= -->
+  <!-- PARALLEL BACKGROUND GENERATION TRACK (BOTTOM) -->
+  <!-- ========================================================================= -->
+  <g transform="translate(50, 640)">
+    <rect x="0" y="0" width="1600" height="330" rx="14" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5" filter="url(#cardShadow)" />
+    <rect x="20" y="16" width="6" height="22" rx="3" fill="#0d9488" />
+    <text x="34" y="32" class="font-sans section-badge" fill="#0f766e">PARALLEL BACKGROUND GENERATION TRACK &bull; RUNS SIMULTANEOUSLY DURING CANDIDATE DWELL TIME</text>
+    <text x="1220" y="32" class="font-sans" font-size="12" font-weight="700" fill="#047857">&check; In-Memory Cache Lookup &lt; 10ms</text>
+
+    <!-- Step 1 Background Worker -->
+    <g transform="translate(20, 55)">
+      <rect x="0" y="0" width="175" height="180" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1" />
+      <text x="10" y="22" class="font-sans worker-title">DURING REGISTRATION</text>
+      <text x="10" y="42" class="font-sans worker-desc">&bull; Pre-generates Turn 1</text>
+      <text x="10" y="58" class="font-sans worker-desc">&bull; Dispatches Turn 2 (Behav Q1)</text>
+      <rect x="10" y="80" width="155" height="44" rx="5" fill="#ecfdf5" stroke="#a7f3d0" />
+      <text x="16" y="98" class="font-sans cache-badge">CACHED IN MEMORY:</text>
+      <text x="16" y="114" class="font-sans" font-size="11" font-weight="700" fill="#065f46">&check; Turn 2 Ready (0ms)</text>
+      <text x="10" y="150" class="font-sans" font-size="9.5" fill="#64748b">Candidate reads Turn 1</text>
+    </g>
+
+    <!-- Step 2 Background Worker -->
+    <g transform="translate(215, 55)">
+      <rect x="0" y="0" width="175" height="180" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1" />
+      <text x="10" y="22" class="font-sans worker-title">DURING TURN 1</text>
+      <text x="10" y="42" class="font-sans worker-desc">&bull; User types Tech Answer 1</text>
+      <text x="10" y="58" class="font-sans worker-desc">&bull; Background worker finishes</text>
+      <rect x="10" y="80" width="155" height="44" rx="5" fill="#eff6ff" stroke="#bfdbfe" />
+      <text x="16" y="98" class="font-sans" font-size="10" font-weight="800" fill="#1e40af">UPON SUBMISSION:</text>
+      <text x="16" y="114" class="font-sans" font-size="11" font-weight="700" fill="#1d4ed8">Instant Serve Turn 2</text>
+      <text x="10" y="150" class="font-sans" font-size="9.5" fill="#64748b">Zero waiting spinner</text>
+    </g>
+
+    <!-- Step 3 Background Worker -->
+    <g transform="translate(410, 55)">
+      <rect x="0" y="0" width="175" height="180" rx="8" fill="#eff6ff" stroke="#93c5fd" stroke-width="1.5" />
+      <text x="10" y="22" class="font-sans worker-title" fill="#1e40af">DURING TURN 2</text>
+      <text x="10" y="42" class="font-sans worker-desc">&bull; User types Behav Answer 2</text>
+      <text x="10" y="58" class="font-sans worker-desc" font-weight="700" fill="#1d4ed8">&bull; Pipeline processes Answer 1</text>
+      <rect x="10" y="80" width="155" height="44" rx="5" fill="#ecfdf5" stroke="#a7f3d0" />
+      <text x="16" y="98" class="font-sans cache-badge">CACHED IN MEMORY:</text>
+      <text x="16" y="114" class="font-sans" font-size="11" font-weight="700" fill="#065f46">&check; Turn 3 Ready (0ms)</text>
+      <text x="10" y="150" class="font-sans" font-size="9.5" fill="#1e40af">Tech Q2 ready ahead!</text>
+    </g>
+
+    <!-- Step 4 Background Worker -->
+    <g transform="translate(605, 55)">
+      <rect x="0" y="0" width="175" height="180" rx="8" fill="#faf5ff" stroke="#d8b4fe" stroke-width="1.5" />
+      <text x="10" y="22" class="font-sans worker-title" fill="#6b21a8">DURING TURN 3</text>
+      <text x="10" y="42" class="font-sans worker-desc">&bull; User types Tech Answer 2</text>
+      <text x="10" y="58" class="font-sans worker-desc" font-weight="700" fill="#7e22ce">&bull; Pipeline processes Answer 2</text>
+      <rect x="10" y="80" width="155" height="44" rx="5" fill="#ecfdf5" stroke="#a7f3d0" />
+      <text x="16" y="98" class="font-sans cache-badge">CACHED IN MEMORY:</text>
+      <text x="16" y="114" class="font-sans" font-size="11" font-weight="700" fill="#065f46">&check; Turn 4 Ready (0ms)</text>
+      <text x="10" y="150" class="font-sans" font-size="9.5" fill="#6b21a8">Behav Q2 ready ahead!</text>
+    </g>
+
+    <!-- Step 5 Background Worker -->
+    <g transform="translate(800, 55)">
+      <rect x="0" y="0" width="175" height="180" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1" />
+      <text x="10" y="22" class="font-sans worker-title">DURING TURN 4</text>
+      <text x="10" y="42" class="font-sans worker-desc">&bull; Pre-gens Turn 5 (Collab Q1)</text>
+      <text x="10" y="58" class="font-sans worker-desc">&bull; Pre-gens Turn 6 (MCQ 1)</text>
+      <rect x="10" y="80" width="155" height="44" rx="5" fill="#ecfdf5" stroke="#a7f3d0" />
+      <text x="16" y="98" class="font-sans cache-badge">CACHED IN MEMORY:</text>
+      <text x="16" y="114" class="font-sans" font-size="11" font-weight="700" fill="#065f46">&check; Turns 5 &amp; 6 Ready</text>
+      <text x="10" y="150" class="font-sans" font-size="9.5" fill="#64748b">Zero wait on transition</text>
+    </g>
+
+    <!-- Step 6 Background Worker -->
+    <g transform="translate(995, 55)">
+      <rect x="0" y="0" width="175" height="180" rx="8" fill="#fffbeb" stroke="#fde68a" stroke-width="1.5" />
+      <text x="10" y="22" class="font-sans worker-title" fill="#b45309">DURING TURN 6 (MCQ 1)</text>
+      <text x="10" y="42" class="font-sans worker-desc">&bull; User reading code (45s)</text>
+      <text x="10" y="58" class="font-sans worker-desc" font-weight="700" fill="#92400e">&bull; Pipeline processes Answer 5</text>
+      <rect x="10" y="80" width="155" height="44" rx="5" fill="#ecfdf5" stroke="#a7f3d0" />
+      <text x="16" y="98" class="font-sans cache-badge">CACHED IN MEMORY:</text>
+      <text x="16" y="114" class="font-sans" font-size="11" font-weight="700" fill="#065f46">&check; Turn 7 Ready (0ms)</text>
+      <text x="10" y="150" class="font-sans" font-size="9.5" fill="#92400e">MCQ hides follow-up delay!</text>
+    </g>
+
+    <!-- Step 7 Background Worker -->
+    <g transform="translate(1190, 55)">
+      <rect x="0" y="0" width="175" height="180" rx="8" fill="#ecfdf5" stroke="#a7f3d0" stroke-width="1.5" />
+      <text x="10" y="22" class="font-sans worker-title" fill="#047857">DURING TURN 7</text>
+      <text x="10" y="42" class="font-sans worker-desc">&bull; User answers Collab Q2</text>
+      <text x="10" y="58" class="font-sans worker-desc">&bull; Pre-gens Turn 8 (MCQ 2)</text>
+      <rect x="10" y="80" width="155" height="44" rx="5" fill="#ecfdf5" stroke="#a7f3d0" />
+      <text x="16" y="98" class="font-sans cache-badge">CACHED IN MEMORY:</text>
+      <text x="16" y="114" class="font-sans" font-size="11" font-weight="700" fill="#065f46">&check; Turn 8 Ready (0ms)</text>
+      <text x="10" y="150" class="font-sans" font-size="9.5" fill="#047857">Instant final question</text>
+    </g>
+
+    <!-- Step 8 Final Evaluation -->
+    <g transform="translate(1385, 55)">
+      <rect x="0" y="0" width="190" height="180" rx="8" fill="#f1f5f9" stroke="#94a3b8" stroke-width="1" />
+      <text x="10" y="22" class="font-sans worker-title">UPON COMPLETION</text>
+      <text x="10" y="42" class="font-sans worker-desc">&bull; Turn 8 submitted</text>
+      <text x="10" y="58" class="font-sans worker-desc">&bull; Single batch evaluation</text>
+      <rect x="10" y="80" width="170" height="44" rx="5" fill="#f0fdf4" stroke="#86efac" />
+      <text x="16" y="98" class="font-sans" font-size="10" font-weight="800" fill="#15803d">FULL REPORT GEN:</text>
+      <text x="16" y="114" class="font-sans" font-size="11" font-weight="700" fill="#166534">&check; Executive PDF Report</text>
+      <text x="10" y="150" class="font-sans" font-size="9.5" fill="#475569">Zero per-turn scoring cost</text>
+    </g>
+
+    <!-- Bottom summary row -->
+    <g transform="translate(20, 255)">
+      <rect x="0" y="0" width="1560" height="55" rx="8" fill="#f8fafc" stroke="#e2e8f0" />
+      <text x="20" y="25" class="font-sans" font-size="11" font-weight="800" fill="#0f172a">ARCHITECTURAL GUARANTEES:</text>
+      <text x="20" y="44" class="font-sans" font-size="11" fill="#475569">1. &bull; Every seed question uses strictly profile/skills with zero answer context.</text>
+      <text x="480" y="44" class="font-sans" font-size="11" fill="#475569">2. &bull; Every follow-up question pressure-tests ONLY the answer from that respected topic.</text>
+      <text x="1070" y="44" class="font-sans" font-size="11" fill="#475569">3. &bull; Dwell time parallelization delivers 100% of questions in &lt;10ms.</text>
+    </g>
+  </g>
+</svg>

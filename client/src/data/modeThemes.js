@@ -1,0 +1,247 @@
+// Frontend Theme & Configuration Definitions for Unified Modes
+
+export const MODE_THEMES = {
+  hiring: {
+    id: 'hiring',
+    name: 'Hiring Mode',
+    shortTitle: 'Hiring',
+    badge: 'Candidate Hiring',
+    tagline: 'Candidate Evaluation — Focus on Resume, Technical Competencies & Collaboration',
+    description: 'Tailored for interviewing job candidates. Evaluates verified resume projects, depth in core technical benchmarks, real-world problem-solving under constraints, and collaborative execution. Attrition, retention, and burnout questions are excluded.',
+    notice: 'Hiring Mode Active: Questions are strictly anchored in your resume achievements, core technical competencies, and collaborative execution. No attrition or burnout questions will be asked.',
+    portalTitle: 'Talent Candidate Evaluation Portal',
+    portalSubtitle: 'Pre-employment technical assessment. Verify your practical experience, core role benchmarks, and collaborative problem solving.',
+    idLabel: 'Candidate ID / Application # *',
+    idPlaceholder: 'e.g. CAND-101 or APP-402',
+    roleLabel: 'Applied Position / Target Role *',
+    resumeLabel: 'Upload Candidate Resume (PDF) — Primary Source for Interview Questions *',
+    submitButtonText: 'Start Candidate Hiring Assessment',
+    evaluatingText: 'Compiling Candidate Hiring Report & Scorecard...',
+    completedTitle: 'Candidate Interview Completed',
+    completedSubtitle: 'Your technical responses and resume project verifications have been recorded.',
+    completedDestination: 'Sent to Recruitment & Hiring Committee',
+    colors: {
+      primary: '#059669', // Emerald-600
+      secondary: '#0d9488', // Teal-600
+      gradientBg: 'from-emerald-50/60 via-slate-50 to-teal-50/40',
+      containerBorder: 'border-emerald-200/80',
+      badgeBg: 'bg-emerald-50',
+      badgeText: 'text-emerald-800',
+      badgeBorder: 'border-emerald-200',
+      focusRing: 'focus:ring-emerald-500 focus:border-emerald-500',
+      button: 'bg-emerald-600 hover:bg-emerald-700 text-white shadow-emerald-600/20',
+      buttonDisabled: 'bg-emerald-300',
+      accentBox: 'bg-gradient-to-r from-emerald-50 to-teal-50 border-emerald-200 text-emerald-900',
+      pillBg: 'bg-emerald-100/70',
+      pillText: 'text-emerald-800',
+      pillBorder: 'border-emerald-200',
+      progressFill: 'bg-emerald-600',
+      loadingSpinner: 'border-emerald-600'
+    },
+    dark: {
+      accentHex: '#10b981',
+      secondaryHex: '#14b8a6',
+      glow: 'rgba(16, 185, 129, 0.16)',
+      glowStrong: 'rgba(16, 185, 129, 0.28)',
+      heroGradient: 'from-emerald-500/18 via-teal-500/6 to-transparent',
+      badge: 'bg-emerald-500/12 text-emerald-300 border-emerald-500/30',
+      pill: 'bg-emerald-500/10 text-emerald-200 border-emerald-500/25',
+      cardBorder: 'border-emerald-500/25',
+      cardHoverBorder: 'hover:border-emerald-500/45',
+      focusRing: 'focus:border-emerald-400/70 focus:ring-2 focus:ring-emerald-500/20',
+      button: 'bg-emerald-500 hover:bg-emerald-400 text-[#041a11] shadow-[0_0_28px_rgba(16,185,129,0.28)]',
+      buttonSecondary: 'bg-emerald-500/10 hover:bg-emerald-500/20 text-emerald-300 border border-emerald-500/30',
+      progressFill: 'bg-gradient-to-r from-emerald-500 to-teal-400',
+      spinner: 'border-emerald-400',
+      textAccent: 'text-emerald-400',
+      borderAccent: 'border-emerald-500/30',
+      bgAccentSubtle: 'bg-emerald-500/[0.06]',
+      ratingActive: 'bg-emerald-500 text-[#041a11] border-emerald-400 shadow-[0_0_16px_rgba(16,185,129,0.35)]'
+    }
+  },
+
+  assessment: {
+    id: 'assessment',
+    name: 'Assessment Mode',
+    shortTitle: 'Assessment',
+    badge: 'Work Skills Appraisal',
+    tagline: 'Work Skills & Performance — Focus on Day-to-Day Execution & Technical Mastery',
+    description: 'Tailored for existing employee periodic evaluations. Focuses on day-to-day role execution, software/system quality, delivery velocity, cross-team coordination, and structured upskilling roadmap. Excludes attrition questions.',
+    notice: 'Work Skills Mode Active: Questions focus on day-to-day engineering and role execution, deliverable quality, problem resolution, and continuous improvement. Excludes attrition questions.',
+    portalTitle: 'Work Skills & Performance Appraisal',
+    portalSubtitle: 'Periodic internal competency evaluation. Demonstrate your day-to-day engineering rigor, delivery ownership, and execution depth.',
+    idLabel: 'Employee ID *',
+    idPlaceholder: 'e.g. EMP-101',
+    roleLabel: 'Current Position / Job Role *',
+    resumeLabel: 'Upload Resume / Project Portfolio (PDF)',
+    submitButtonText: 'Start Work Skills Assessment',
+    evaluatingText: 'Generating Work Skills Performance Appraisal...',
+    completedTitle: 'Work Skills Assessment Completed',
+    completedSubtitle: 'Your practical engineering competencies and execution reviews have been compiled.',
+    completedDestination: 'Sent to Engineering Director & HR Leadership',
+    colors: {
+      primary: '#2563eb', // Blue-600
+      secondary: '#4f46e5', // Indigo-600
+      gradientBg: 'from-blue-50/60 via-slate-50 to-indigo-50/40',
+      containerBorder: 'border-blue-200/80',
+      badgeBg: 'bg-blue-50',
+      badgeText: 'text-blue-800',
+      badgeBorder: 'border-blue-200',
+      focusRing: 'focus:ring-blue-500 focus:border-blue-500',
+      button: 'bg-blue-600 hover:bg-blue-700 text-white shadow-blue-600/20',
+      buttonDisabled: 'bg-blue-300',
+      accentBox: 'bg-gradient-to-r from-blue-50 to-indigo-50 border-blue-200 text-blue-900',
+      pillBg: 'bg-blue-100/70',
+      pillText: 'text-blue-800',
+      pillBorder: 'border-blue-200',
+      progressFill: 'bg-blue-600',
+      loadingSpinner: 'border-blue-600'
+    },
+    dark: {
+      accentHex: '#3b82f6',
+      secondaryHex: '#6366f1',
+      glow: 'rgba(59, 130, 246, 0.16)',
+      glowStrong: 'rgba(59, 130, 246, 0.28)',
+      heroGradient: 'from-blue-500/18 via-indigo-500/6 to-transparent',
+      badge: 'bg-blue-500/12 text-blue-300 border-blue-500/30',
+      pill: 'bg-blue-500/10 text-blue-200 border-blue-500/25',
+      cardBorder: 'border-blue-500/25',
+      cardHoverBorder: 'hover:border-blue-500/45',
+      focusRing: 'focus:border-blue-400/70 focus:ring-2 focus:ring-blue-500/20',
+      button: 'bg-blue-500 hover:bg-blue-400 text-white shadow-[0_0_28px_rgba(59,130,246,0.32)]',
+      buttonSecondary: 'bg-blue-500/10 hover:bg-blue-500/20 text-blue-300 border border-blue-500/30',
+      progressFill: 'bg-gradient-to-r from-blue-500 to-indigo-400',
+      spinner: 'border-blue-400',
+      textAccent: 'text-blue-400',
+      borderAccent: 'border-blue-500/30',
+      bgAccentSubtle: 'bg-blue-500/[0.06]',
+      ratingActive: 'bg-blue-500 text-white border-blue-400 shadow-[0_0_16px_rgba(59,130,246,0.35)]'
+    }
+  },
+
+  retention: {
+    id: 'retention',
+    name: 'Retention Mode',
+    shortTitle: 'Retention',
+    badge: 'Retention & Well-being',
+    tagline: 'Talent Retention — Focus on Flight Risk, Burnout Index, Engagement & Stay Factors',
+    description: 'The comprehensive talent retention evaluation. Assesses technical skills, workload stress, burnout index, company alignment, attrition flight-risk signals, and strategic retention recommendations.',
+    notice: 'Retention Mode Active: Comprehensive evaluation reviewing role competencies, workload pacing, burnout index, engagement, and personal development.',
+    portalTitle: 'Employee Experience & Retention Portal',
+    portalSubtitle: 'Comprehensive talent experience assessment. Benchmark your role competencies, share feedback on workload pacing, and align career goals.',
+    idLabel: 'Employee ID *',
+    idPlaceholder: 'e.g. EMP-101',
+    roleLabel: 'Job Role / Position *',
+    resumeLabel: 'Upload Resume (PDF)',
+    submitButtonText: 'Start Retention Assessment',
+    evaluatingText: 'Analyzing Engagement, Well-being & Retention Strategy...',
+    completedTitle: 'Retention Evaluation Completed',
+    completedSubtitle: 'Your workload feedback, skill benchmarks, and career alignment have been captured.',
+    completedDestination: 'Sent to HR Talent & People Operations',
+    colors: {
+      primary: '#7c3aed', // Violet-600
+      secondary: '#9333ea', // Purple-600
+      gradientBg: 'from-purple-50/60 via-slate-50 to-amber-50/30',
+      containerBorder: 'border-purple-200/80',
+      badgeBg: 'bg-purple-50',
+      badgeText: 'text-purple-800',
+      badgeBorder: 'border-purple-200',
+      focusRing: 'focus:ring-purple-500 focus:border-purple-500',
+      button: 'bg-purple-600 hover:bg-purple-700 text-white shadow-purple-600/20',
+      buttonDisabled: 'bg-purple-300',
+      accentBox: 'bg-gradient-to-r from-purple-50 to-amber-50 border-purple-200 text-purple-900',
+      pillBg: 'bg-purple-100/70',
+      pillText: 'text-purple-800',
+      pillBorder: 'border-purple-200',
+      progressFill: 'bg-purple-600',
+      loadingSpinner: 'border-purple-600'
+    },
+    dark: {
+      accentHex: '#a855f7',
+      secondaryHex: '#8b5cf6',
+      glow: 'rgba(168, 85, 247, 0.16)',
+      glowStrong: 'rgba(168, 85, 247, 0.28)',
+      heroGradient: 'from-purple-500/18 via-violet-500/6 to-transparent',
+      badge: 'bg-purple-500/12 text-purple-300 border-purple-500/30',
+      pill: 'bg-purple-500/10 text-purple-200 border-purple-500/25',
+      cardBorder: 'border-purple-500/25',
+      cardHoverBorder: 'hover:border-purple-500/45',
+      focusRing: 'focus:border-purple-400/70 focus:ring-2 focus:ring-purple-500/20',
+      button: 'bg-purple-600 hover:bg-purple-500 text-white shadow-[0_0_28px_rgba(168,85,247,0.32)]',
+      buttonSecondary: 'bg-purple-500/10 hover:bg-purple-500/20 text-purple-300 border border-purple-500/30',
+      progressFill: 'bg-gradient-to-r from-purple-500 to-fuchsia-400',
+      spinner: 'border-purple-400',
+      textAccent: 'text-purple-400',
+      borderAccent: 'border-purple-500/30',
+      bgAccentSubtle: 'bg-purple-500/[0.06]',
+      ratingActive: 'bg-purple-600 text-white border-purple-400 shadow-[0_0_16px_rgba(168,85,247,0.35)]'
+    }
+  },
+
+  layoff: {
+    id: 'layoff',
+    name: 'Layoff Mode',
+    shortTitle: 'Layoff',
+    badge: 'Workforce Impact',
+    tagline: 'Workforce Restructuring — Focus on Role Criticality, Business Impact & Versatility',
+    description: 'Objective, evidence-based workforce alignment assessment. Measures core project criticality, direct business value delivered, cross-functional versatility and adaptability, operational independence, and redundancy risk.',
+    notice: 'Workforce Impact Mode Active: Focuses on core system criticality, delivered business value, multi-stack versatility, and operational resilience under team constraints.',
+    portalTitle: 'Workforce Restructuring & Impact Review',
+    portalSubtitle: 'Objective talent alignment review. Evaluates essential system dependencies, direct business output, and cross-functional flexibility.',
+    idLabel: 'Employee ID *',
+    idPlaceholder: 'e.g. EMP-101',
+    roleLabel: 'Current Position / Department Role *',
+    resumeLabel: 'Upload Resume / Deliverables Portfolio (PDF)',
+    submitButtonText: 'Start Workforce Impact Assessment',
+    evaluatingText: 'Compiling Objective Workforce Impact & Criticality Report...',
+    completedTitle: 'Workforce Review Completed',
+    completedSubtitle: 'Your operational criticality, business value, and cross-functional versatility have been recorded.',
+    completedDestination: 'Sent to Strategic Workforce Planning & Executive HR',
+    colors: {
+      primary: '#be123c', // Rose-700
+      secondary: '#334155', // Slate-700
+      gradientBg: 'from-rose-50/50 via-slate-50 to-slate-100/60',
+      containerBorder: 'border-rose-200/80',
+      badgeBg: 'bg-rose-50',
+      badgeText: 'text-rose-900',
+      badgeBorder: 'border-rose-200',
+      focusRing: 'focus:ring-rose-500 focus:border-rose-500',
+      button: 'bg-rose-700 hover:bg-rose-800 text-white shadow-rose-700/20',
+      buttonDisabled: 'bg-rose-300',
+      accentBox: 'bg-gradient-to-r from-rose-50 to-slate-100 border-rose-200 text-slate-900',
+      pillBg: 'bg-rose-100/70',
+      pillText: 'text-rose-900',
+      pillBorder: 'border-rose-200',
+      progressFill: 'bg-rose-700',
+      loadingSpinner: 'border-rose-700'
+    },
+    dark: {
+      accentHex: '#f43f5e',
+      secondaryHex: '#e11d48',
+      glow: 'rgba(244, 63, 94, 0.16)',
+      glowStrong: 'rgba(244, 63, 94, 0.28)',
+      heroGradient: 'from-rose-500/18 via-red-500/6 to-transparent',
+      badge: 'bg-rose-500/12 text-rose-300 border-rose-500/30',
+      pill: 'bg-rose-500/10 text-rose-200 border-rose-500/25',
+      cardBorder: 'border-rose-500/25',
+      cardHoverBorder: 'hover:border-rose-500/45',
+      focusRing: 'focus:border-rose-400/70 focus:ring-2 focus:ring-rose-500/20',
+      button: 'bg-rose-600 hover:bg-rose-500 text-white shadow-[0_0_28px_rgba(244,63,94,0.32)]',
+      buttonSecondary: 'bg-rose-500/10 hover:bg-rose-500/20 text-rose-300 border border-rose-500/30',
+      progressFill: 'bg-gradient-to-r from-rose-500 to-red-400',
+      spinner: 'border-rose-400',
+      textAccent: 'text-rose-400',
+      borderAccent: 'border-rose-500/30',
+      bgAccentSubtle: 'bg-rose-500/[0.06]',
+      ratingActive: 'bg-rose-600 text-white border-rose-400 shadow-[0_0_16px_rgba(244,63,94,0.35)]'
+    }
+  }
+};
+
+export const DEFAULT_CLIENT_MODE = 'retention';
+
+export function getClientModeTheme(modeKey) {
+  if (!modeKey) return MODE_THEMES[DEFAULT_CLIENT_MODE];
+  const normalized = String(modeKey).toLowerCase().trim();
+  return MODE_THEMES[normalized] || MODE_THEMES[DEFAULT_CLIENT_MODE];
+}

@@ -1,0 +1,21 @@
+{
+  "employees": [
+    {
+      "id": "EMP-101",
+      "name": "Charan",
+      "role": "Full Stack Developer"
+    }
+  ],
+  "assessments": [
+    {
+      "employee_id": "EMP-101",
+      "transcript": [
+        {
+          "question": "q1",
+          "answer": "a1"
+        }
+      ],
+      "id": "beaf874a-badd-4691-a8e8-a0e958051a38"
+    }
+  ]
+}

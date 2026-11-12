@@ -1,0 +1,122 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" role="img" aria-labelledby="title description">
+  <title id="title">Adaptive assessment question-generation architecture</title>
+  <desc id="description">An answer-gated flow that persists each employee response, builds a transcript-aware prompt, rotates assessment topics, generates one question with Gemini, validates and stores it, then returns it to the employee. A topic schedule and call-efficiency notes are shown below.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0 0 L10 5 L0 10 Z" fill="#486176" />
+    </marker>
+    <marker id="arrowTeal" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0 0 L10 5 L0 10 Z" fill="#087f78" />
+    </marker>
+    <style>
+      text { font-family: "Segoe UI", Arial, sans-serif; fill: #183244; }
+      .eyebrow { font-size: 15px; font-weight: 700; letter-spacing: 2px; fill: #087f78; }
+      .title { font-size: 34px; font-weight: 700; }
+      .subtitle { font-size: 17px; fill: #536c7d; }
+      .node-title { font-size: 18px; font-weight: 700; }
+      .body { font-size: 14px; fill: #536c7d; }
+      .small { font-size: 12px; fill: #536c7d; }
+      .label { font-size: 12px; font-weight: 700; fill: #087f78; letter-spacing: 1px; }
+      .number { font-size: 13px; font-weight: 700; fill: #fff; }
+      .topic { font-size: 14px; font-weight: 700; }
+    </style>
+  </defs>
+
+  <rect width="1600" height="1000" fill="#f4f7f5" />
+  <path d="M0 0H1600V15H0Z" fill="#087f78" />
+  <text x="72" y="73" class="eyebrow">ADAPTIVE ASSESSMENT / QUESTION PIPELINE</text>
+  <text x="72" y="122" class="title">Every next question starts with the last answer</text>
+  <text x="72" y="154" class="subtitle">Answer-gated generation keeps follow-ups grounded while the topic sequence maintains balanced coverage.</text>
+
+  <rect x="72" y="193" width="1456" height="474" rx="16" fill="#ffffff" stroke="#d8e2e1" stroke-width="2" />
+  <text x="104" y="230" class="label">OPTIMIZED TARGET / ANSWER-AWARE REQUEST LIFECYCLE</text>
+
+  <g>
+    <rect x="104" y="272" width="250" height="118" rx="10" fill="#e8f4f2" stroke="#9bcac4" stroke-width="2" />
+    <circle cx="130" cy="298" r="15" fill="#087f78" /><text x="126" y="303" class="number">1</text>
+    <text x="155" y="304" class="node-title">Employee response</text>
+    <text x="126" y="337" class="body">Answer submitted in the UI</text>
+    <text x="126" y="359" class="body">No speculative next question</text>
+
+    <rect x="414" y="272" width="250" height="118" rx="10" fill="#edf3f7" stroke="#b6c8d3" stroke-width="2" />
+    <circle cx="440" cy="298" r="15" fill="#486176" /><text x="436" y="303" class="number">2</text>
+    <text x="465" y="304" class="node-title">Assessment API</text>
+    <text x="436" y="337" class="body">Accept answer + assessment ID</text>
+    <text x="436" y="359" class="body">Load profile and current state</text>
+
+    <rect x="724" y="272" width="250" height="118" rx="10" fill="#edf3f7" stroke="#b6c8d3" stroke-width="2" />
+    <circle cx="750" cy="298" r="15" fill="#486176" /><text x="746" y="303" class="number">3</text>
+    <text x="775" y="304" class="node-title">Persist response</text>
+    <text x="746" y="337" class="body">Save answer to transcript first</text>
+    <text x="746" y="359" class="body">Preserve the full Q&amp;A history</text>
+
+    <rect x="1034" y="272" width="250" height="118" rx="10" fill="#fff4e4" stroke="#e8c78e" stroke-width="2" />
+    <circle cx="1060" cy="298" r="15" fill="#b97819" /><text x="1056" y="303" class="number">4</text>
+    <text x="1085" y="304" class="node-title">Build next prompt</text>
+    <text x="1056" y="337" class="body">Profile + resume + role skills</text>
+    <text x="1056" y="359" class="body">Prior questions and answers</text>
+
+    <rect x="1344" y="272" width="150" height="118" rx="10" fill="#fff4e4" stroke="#e8c78e" stroke-width="2" />
+    <circle cx="1370" cy="298" r="15" fill="#b97819" /><text x="1366" y="303" class="number">5</text>
+    <text x="1395" y="304" class="node-title">Choose</text>
+    <text x="1366" y="337" class="body">next topic</text>
+    <text x="1366" y="359" class="small">from fixed schedule</text>
+
+    <path d="M354 331H405" stroke="#486176" stroke-width="3" marker-end="url(#arrow)" />
+    <path d="M664 331H715" stroke="#486176" stroke-width="3" marker-end="url(#arrow)" />
+    <path d="M974 331H1025" stroke="#486176" stroke-width="3" marker-end="url(#arrow)" />
+    <path d="M1284 331H1335" stroke="#486176" stroke-width="3" marker-end="url(#arrow)" />
+  </g>
+
+  <path d="M1419 391V443H1137" fill="none" stroke="#087f78" stroke-width="3" marker-end="url(#arrowTeal)" />
+  <rect x="104" y="431" width="500" height="142" rx="10" fill="#e8f4f2" stroke="#9bcac4" stroke-width="2" />
+  <circle cx="130" cy="458" r="15" fill="#087f78" /><text x="126" y="463" class="number">6</text>
+  <text x="155" y="464" class="node-title">Generate exactly one question</text>
+  <text x="130" y="499" class="body">One Gemini request uses the newly saved response</text>
+  <text x="130" y="522" class="body">Fallback models are tried only for transient / unsupported errors</text>
+  <text x="130" y="548" class="small">The API waits for generation; the UI shows a loading state.</text>
+
+  <rect x="654" y="431" width="360" height="142" rx="10" fill="#edf3f7" stroke="#b6c8d3" stroke-width="2" />
+  <circle cx="680" cy="458" r="15" fill="#486176" /><text x="676" y="463" class="number">7</text>
+  <text x="705" y="464" class="node-title">Validate and store</text>
+  <text x="680" y="499" class="body">Reject empty or repeated questions</text>
+  <text x="680" y="522" class="body">Append next topic + question to transcript</text>
+  <text x="680" y="548" class="small">Return the stored question and turn number.</text>
+
+  <rect x="1064" y="431" width="430" height="142" rx="10" fill="#e8f4f2" stroke="#9bcac4" stroke-width="2" />
+  <circle cx="1090" cy="458" r="15" fill="#087f78" /><text x="1086" y="463" class="number">8</text>
+  <text x="1115" y="464" class="node-title">Show next question</text>
+  <text x="1090" y="499" class="body">Display only after the answer-aware result arrives</text>
+  <text x="1090" y="522" class="body">Employee reads, considers, and responds at their pace</text>
+  <text x="1090" y="548" class="small">Then repeat from step 1; evaluate once at completion.</text>
+
+  <path d="M604 502H645" stroke="#087f78" stroke-width="3" marker-end="url(#arrowTeal)" />
+  <path d="M1014 502H1055" stroke="#087f78" stroke-width="3" marker-end="url(#arrowTeal)" />
+  <path d="M1279 574V620H228V399" fill="none" stroke="#087f78" stroke-width="3" marker-end="url(#arrowTeal)" />
+  <rect x="619" y="603" width="290" height="28" rx="14" fill="#ffffff" />
+  <text x="638" y="622" class="small" fill="#087f78">New prompt uses the response just submitted</text>
+
+  <text x="72" y="724" class="label">ALTERNATING TOPIC ROTATION</text>
+  <text x="72" y="753" class="small">Cycle through all four domains, then repeat to balance coverage across turns</text>
+  <g>
+    <rect x="72" y="778" width="172" height="62" rx="8" fill="#e8f4f2" stroke="#9bcac4" />
+    <text x="158" y="803" text-anchor="middle" class="topic">SKILLS</text><text x="158" y="824" text-anchor="middle" class="small">Turns 1 &amp; 5</text>
+    <path d="M250 809H278" stroke="#486176" stroke-width="2" marker-end="url(#arrow)" />
+    <rect x="288" y="778" width="172" height="62" rx="8" fill="#fff4e4" stroke="#e8c78e" />
+    <text x="374" y="803" text-anchor="middle" class="topic">BURNOUT</text><text x="374" y="824" text-anchor="middle" class="small">Turns 2 &amp; 6</text>
+    <path d="M466 809H494" stroke="#486176" stroke-width="2" marker-end="url(#arrow)" />
+    <rect x="504" y="778" width="172" height="62" rx="8" fill="#edf3f7" stroke="#b6c8d3" />
+    <text x="590" y="803" text-anchor="middle" class="topic">ENGAGEMENT</text><text x="590" y="824" text-anchor="middle" class="small">Turns 3 &amp; 7</text>
+    <path d="M682 809H710" stroke="#486176" stroke-width="2" marker-end="url(#arrow)" />
+    <rect x="720" y="778" width="172" height="62" rx="8" fill="#fcebea" stroke="#e1aaa4" />
+    <text x="806" y="803" text-anchor="middle" class="topic">ATTRITION</text><text x="806" y="824" text-anchor="middle" class="small">Turns 4 &amp; 8</text>
+  </g>
+
+  <rect x="950" y="704" width="578" height="174" rx="12" fill="#183244" />
+  <text x="980" y="742" font-size="17" font-weight="700" fill="#ffffff">CALL EFFICIENCY + RESPONSE QUALITY</text>
+  <circle cx="984" cy="774" r="4" fill="#60c5b5" /><text x="1000" y="779" font-size="14" fill="#e7f0f2">One generation request per submitted answer; no stale speculative prompt.</text>
+  <circle cx="984" cy="807" r="4" fill="#60c5b5" /><text x="1000" y="812" font-size="14" fill="#e7f0f2">Keep history in the transcript; avoid separate per-answer LLM calls.</text>
+  <circle cx="984" cy="840" r="4" fill="#60c5b5" /><text x="1000" y="845" font-size="14" fill="#e7f0f2">Wait for generation before advancing; assess the full transcript once.</text>
+
+  <text x="72" y="931" class="small">Target differs from current code: client prefetches before answers, and server groups topics in pairs. This flow gates generation on the saved answer and alternates topics.</text>
+</svg>

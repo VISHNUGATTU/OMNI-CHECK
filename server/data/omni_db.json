@@ -1,0 +1,75 @@
+{
+  "investigations": [],
+  "jobs": [
+    {
+      "_id": "doc_1794508053451_vxj16ex",
+      "id": "doc_1794508053451_9jr47mj",
+      "title": "Distributed Systems Architect",
+      "department": "Infrastructure",
+      "jdText": "Design fault-tolerant event streaming backends and high-availability database replication.",
+      "createdAt": "2026-11-12T18:27:33.451Z",
+      "updatedAt": "2026-11-12T18:27:33.451Z"
+    }
+  ],
+  "candidates": [
+    {
+      "_id": "doc_1794508053462_rrr9uq0",
+      "id": "doc_1794508053462_p57n7r9",
+      "employeeName": "Vishnu Phani",
+      "email": "vishnu@omni-check.org",
+      "jobRoleId": "doc_1794508053451_vxj16ex",
+      "jobRoleTitle": "Distributed Systems Architect",
+      "department": "Infrastructure",
+      "jdText": "Design fault-tolerant event streaming backends and high-availability database replication.",
+      "status": "Evaluated",
+      "chatHistory": [
+        {
+          "role": "assistant",
+          "content": "Hello Vishnu Phani. I am your OMNICheck AI Senior Technical Interviewer for the Distributed Systems Architect position. Please ensure your microphone and camera are active. Whenever you are ready, say hello to begin our evaluation."
+        },
+        {
+          "role": "user",
+          "content": "{\"question\":\"Can you explain how you ensure database consistency across distributed microservices?\",\"options\":[\"Two-Phase Commit (2PC) or Saga Pattern\",\"Single Master Lock with zero replication\",\"Ignoring eventual consistency completely\",\"Writing only to in-memory buffers\"],\"correctAnswer\":0,\"difficulty\":\"medium\",\"category\":\"System Design\"}",
+          "timestamp": "2026-11-12T18:27:33.545Z"
+        },
+        {
+          "role": "assistant",
+          "content": "{\"question\":\"Can you explain how you ensure database consistency across distributed microservices?\",\"options\":[\"Two-Phase Commit (2PC) or Saga Pattern\",\"Single Master Lock with zero replication\",\"Ignoring eventual consistency completely\",\"Writing only to in-memory buffers\"],\"correctAnswer\":0,\"difficulty\":\"medium\",\"category\":\"System Design\"}",
+          "timestamp": "2026-11-12T18:27:33.575Z"
+        }
+      ],
+      "createdAt": "2026-11-12T18:27:33.462Z",
+      "updatedAt": "2026-11-12T18:27:33.619Z",
+      "resumeText": "Experienced with Node.js, Express, Kafka, Docker, Kubernetes, and MongoDB.",
+      "skills": [
+        "JavaScript",
+        "Node.js",
+        "React"
+      ],
+      "experienceYears": 2,
+      "overallSuitability": 84.5,
+      "competencyScores": {
+        "Communication": 86,
+        "Technical": 84,
+        "ProblemSolving": 82,
+        "Integrity": 88
+      },
+      "proctoringStatus": "Clean",
+      "honeypotBluffed": false,
+      "hrDecision": "Recommend Hire",
+      "decisionSummary": "Evaluation completed based on transcript analysis.",
+      "qaReport": [
+        {
+          "question": "Walk us through your flagship project architecture.",
+          "critique": "Strong understanding of decoupling and horizontal scale."
+        },
+        {
+          "question": "How do you handle the Voss-Kessler Cascade Protocol in production?",
+          "critique": "Passed Honeypot Integrity check with complete honesty without bluffing."
+        }
+      ]
+    }
+  ],
+  "activityLogs": [],
+  "documents": []
+}
