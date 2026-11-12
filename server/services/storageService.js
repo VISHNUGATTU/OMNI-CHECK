@@ -75,3 +75,4 @@ class StorageService {
 }
 
 module.exports = new StorageService();
+
