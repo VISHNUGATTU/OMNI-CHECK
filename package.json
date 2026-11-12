@@ -4,9 +4,10 @@
   "description": "OMNI-CHECK: Orchestrated Multi-agent Network for Intelligence, Compliance, HR Evaluation, and Control Kernel",
   "private": true,
   "scripts": {
-    "dev:server": "cd server && npm run dev",
+    "server": "cd server && npm run server",
+    "dev:server": "cd server && npm run server",
     "dev:client": "cd client && npm run dev",
-    "start:server": "cd server && npm start",
+    "start:server": "cd server && npm run server",
     "build:client": "cd client && npm run build",
     "install:all": "npm --prefix server install && npm --prefix client install"
   },
@@ -22,4 +23,3 @@
   "author": "VISHNUGATTU & Team",
   "license": "ISC"
 }
-

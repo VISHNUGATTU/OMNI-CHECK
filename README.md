@@ -120,7 +120,7 @@ Fill in your credentials (e.g. `GEMINI_API_KEY`, `GROQ_API_KEY_1`, `MONGODB_URI`
 ### 3. Start the Backend Server
 ```bash
 cd server
-npm start
+npm run server
 ```
 * Server runs on `http://localhost:5000`
 * WebSockets stream on `ws://localhost:5000/ws`
@@ -142,19 +142,62 @@ FastAPI server runs on `http://localhost:8000`.
 
 ---
 
-## 🐳 One-Command Full Stack Docker Orchestration
+## 🐳 Running Docker Containers Separately
 
-You can spin up the entire production stack (MongoDB, Redis, Python AI-Engine, Node.js Server, and React Frontend) using Docker Compose:
+You have two simple ways to get and run individual, separate containers:
+
+### Option 1: Run Separate Services via Docker Compose
+You don't need to run everything at once; you can start only the specific containers you need:
 
 ```bash
-docker-compose up --build
+# Start ONLY the Node.js Server container:
+docker-compose up -d server
+
+# Start ONLY the React Client container:
+docker-compose up -d client
+
+# Start ONLY the Python AI Engine container:
+docker-compose up -d ai-engine
+
+# Start standalone MongoDB & Redis containers:
+docker-compose up -d mongo redis
 ```
 
-- **Frontend**: `http://localhost`
-- **Backend API & WebSockets**: `http://localhost:5000`
-- **AI Microservice**: `http://localhost:8000`
-- **MongoDB**: `localhost:27017`
-- **Redis Broker**: `localhost:6379`
+To see running separate containers:
+```bash
+docker ps
+```
+
+To stop a specific container:
+```bash
+docker-compose stop server
+```
+
+### Option 2: Build & Run Individual Raw Docker Containers
+You can build and run any container completely standalone:
+
+```bash
+# 1. Build and run Server Container alone:
+docker build -t omnicheck-server ./server
+docker run -d --name my-server -p 5000:5000 --env-file server/.env omnicheck-server
+
+# 2. Build and run Client Container alone:
+docker build -t omnicheck-client ./client
+docker run -d --name my-client -p 80:80 omnicheck-client
+
+# 3. Build and run AI Engine Container alone:
+docker build -t omnicheck-ai ./ai-engine
+docker run -d --name my-ai-engine -p 8000:8000 --env-file ai-engine/.env omnicheck-ai
+```
+
+---
+
+## 🌐 Full Stack One-Command Orchestration
+If you ever want all 5 containers to boot together in a unified network:
+```bash
+docker-compose up --build -d
+```
+
 
 
 ---

@@ -105,3 +105,4 @@ class VectorStore {
 }
 
 module.exports = new VectorStore();
+

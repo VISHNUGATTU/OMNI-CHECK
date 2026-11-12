@@ -89,3 +89,4 @@ class JobQueue extends EventEmitter {
 }
 
 module.exports = new JobQueue();
+
